@@ -16,17 +16,16 @@ const App = () => {
       <SavedList list={savedList} />
       <div>
         <div>
-<Link to ='/'></Link> 
-<Link to = '/movies'></Link>
+{/* <Link to ='/'></Link> 
+<Link to = '/movies'></Link> */}
 
         </div>
         <Switch>
-      {/* <Route path = '/'>
-            <MovieList />
-          </Route> */}
+        <Link to = '/movies'></Link>
         <Route path = '/movies/:id'>
           <Movie items = {MovieList}/>
         </Route>
+        <Link to ='/'></Link> 
           <Route path = '/'>
             <MovieList />
           </Route>

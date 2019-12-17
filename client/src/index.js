@@ -10,3 +10,4 @@ ReactDOM.render(
     <App />
 </Router>, 
     document.getElementById('root'));
+//wrap APP in router from browser router
