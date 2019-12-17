@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Switch, Link} from 'react-router-dom';
 import SavedList from './Movies/SavedList';
 import Movie from './Movies/Movie' ;
 import MovieList from './Movies/MovieList';
@@ -15,13 +15,22 @@ const App = () => {
     <div>
       <SavedList list={savedList} />
       <div>
-        <Route path = '/movies/:movieID'>
-          <Movie/>
+        <div>
+<Link to ='/'></Link> 
+<Link to = '/movies'></Link>
+
+        </div>
+        <Switch>
+      {/* <Route path = '/'>
+            <MovieList />
+          </Route> */}
+        <Route path = '/movies/:id'>
+          <Movie items = {MovieList}/>
         </Route>
           <Route path = '/'>
             <MovieList />
           </Route>
-
+          </Switch>
 
 
       </div>
