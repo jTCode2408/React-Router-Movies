@@ -24,7 +24,7 @@ const Movie = (props) => {
           console.error(error);
         });
 
-  },[id, movie]);
+  },[id, movie]); //dependency array. need movie & id for link
   
   // Uncomment this only when you have moved on to the stretch goals
   // const saveMovie = () => {
@@ -40,7 +40,8 @@ const Movie = (props) => {
   return (
     <div className="save-wrapper">
       <div className="movie-card">
-      <MovieCard key ={movie.id} movie = {movie}/>
+      <MovieCard key ={movie.id} movie = {movie}/> 
+  {/*import movie card and setting key of id to pull back for [ath*/}
         <h2>{title}</h2>
         <div className="movie-director">
           Director: <em>{director}</em>

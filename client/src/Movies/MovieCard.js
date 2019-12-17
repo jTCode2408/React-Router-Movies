@@ -2,9 +2,9 @@ import React from 'react';
 import { useRouteMatch, Link, Route, useParams } from 'react-router-dom';
 
 const MovieCard = props => {
-  const {id} = useParams();
+  const {id} = useParams(); //get id of movie for links
   console.log(id);
-  const {path, url} =useRouteMatch();
+  const {path, url} =useRouteMatch(); //set path on links
 
   return(
 <div>
